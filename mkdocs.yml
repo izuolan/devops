@@ -1,0 +1,130 @@
+# Project information
+site_name: DevOps资料库
+site_description: 左蓝的DevOps资料库
+site_author: Zuolan
+site_url: https://note.zuolan.me/
+
+# Repository
+repo_name: izuolan/devops
+repo_url: https://github.com/izuolan/devops
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2014 - 2018 Zuolan'
+
+# Configuration
+theme:
+  name: 'material'
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  feature:
+    tabs: true
+  palette:
+    primary: white
+    accent: white
+  font: false
+  favicon: /img/favicon.png
+  logo:
+    icon: "home"
+
+# Customization
+# https://fontawesome.com/icons?from=io
+extra:
+  social:
+    - type: github
+      link: https://github.com/izuolan
+    - type: telegram
+      link: https://t.me/zuolan
+    - type: twitter
+      link: https://twitter.com/izuolan
+  disqus: 'zuolan'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Google Analytics
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
+
+# Page tree start
+pages:
+  - 首页: index.md
+  - 索引: catlog.md
+  - 架构: 
+    - 基础知识: 
+      - Linux: arch/base/Linux.md
+      - 负载均衡: arch/base/负载均衡.md
+      - 虚拟化: arch/base/虚拟化.md
+      - 容器技术: arch/base/容器技术.md
+    - 网络: 
+      - OSI模型: arch/network/OSI模型.md
+      - TCP/IP协议: arch/network/TCP-IP协议.md
+  - 开发: 
+    - Shell: 
+      - 基础: dev/Shell/基础.md
+      - 正则表达式: dev/Shell/正则表达式.md
+      - awk与sed的使用: dev/Shell/awk-sed.md
+    - Git: 
+      - 基础: dev/Git/基础.md
+    - Go: 
+      - 基础: dev/Go/基础.md
+      - 进阶: dev/Go/进阶.md
+    - Python: 
+      - 基础: dev/Python/基础.md
+    - 数据结构与算法: 
+      - 常见数据结构: dev/algorithm/常见数据结构.md
+  - 编排与调度: 
+    - 自动化: 
+      - Ansible: scheduling/automation/Ansible.md
+    - Docker: 
+      - Compose: scheduling/Docker/Compose.md
+    - Kubernetes: 
+      - 基本概念: 
+        - Pod: scheduling/Kubernetes/base/pod.md
+        - Service: scheduling/Kubernetes/base/service.md
+        - Ingress: scheduling/Kubernetes/base/ingress.md
+      - 集群网络: scheduling/Kubernetes/集群网络.md
+      - 集群监控: scheduling/Kubernetes/集群监控.md
+    - 服务发现: 
+      - etcd: scheduling/discovery/etcd.md
+      - consul: scheduling/discovery/consul.md
+  - 监控与可视化: 
+    - ELK/EFK: visualization/ELK-EFK.md
+  - 持续集成与部署: 
+    - Jenkins: ci-cd/Jenkins.md
+

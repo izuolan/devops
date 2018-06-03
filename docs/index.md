@@ -1,6 +1,4 @@
-# DevOps笔记
-
-[note.zuolan.me/devops](https://note.zuolan.me/devops)
+# 首页
 
 ## 这是什么
 
@@ -26,4 +24,3 @@
 ## 版权
 
 除非特别说明，否则全站内容默认使用 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。在遵守协议前提下，读者可以自由转载、分发网站内容。  
-个人整理的DevOps笔记
